@@ -1,13 +1,14 @@
 #include <iostream>
 #include "resist.h"
+using namespace std;
 
 void initResistor(Resistor& res) {
-    std::cout << "Enter resistance (Ohm): ";
-    std::cin >> res.resistance;
+    cout << "Enter resistance (Ohm): ";
+    cin >> res.resistance;
     res.resistance = (res.resistance < 0) ? 0 : res.resistance;
 
-    std::cout << "Enter max power (Watt): ";
-    std::cin >> res.max_power;
+    cout << "Enter max power (Watt): ";
+    cin >> res.max_power;
     res.max_power = (res.max_power < 0) ? 0 : res.max_power;
 }
 
@@ -36,7 +37,7 @@ void checkResistors(const Resistor* resArray, int size, double voltage) {
         if (P > resArray[i].max_power) {
             std::cout << "Resistor #" << i+1 << " has been burned\n";
         } else {
-            std::cout << "Resistor #" << i+1 << " is good\n";
+            cout << "Resistor #" << i+1 << " is good\n";
         }
     }
 }
