@@ -1,5 +1,6 @@
 #include <iostream>
 #include "resist.h"
+using namespace std;
 
 int main() {
     Resistor singleResistor;
@@ -12,7 +13,7 @@ int main() {
 
     std::cout << "Enter Voltage (V): ";
     double voltage;
-    std::cin >> voltage;
+    cin >> voltage;
 
     checkResistors(resArray, arraySize, voltage);
 
